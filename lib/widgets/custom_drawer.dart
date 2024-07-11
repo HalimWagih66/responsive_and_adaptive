@@ -4,8 +4,6 @@ import 'package:responsive_and_adaptive/models/UserInfoListTileModel.dart';
 import 'package:responsive_and_adaptive/models/drawer_item_model.dart';
 import 'package:responsive_and_adaptive/widgets/InActiveDrawerItem_and_ActiveDrawerItem.dart';
 import 'package:responsive_and_adaptive/widgets/UserInfoListTileItem.dart';
-
-import 'drawer_item.dart';
 import 'drawer_items_list_view.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -28,7 +26,7 @@ class CustomDrawer extends StatelessWidget {
             hasScrollBody: false,
             child: Column(
               children: [
-                Spacer(),
+                Expanded(child:  SizedBox(height: 20)),
                 InActiveDrawerItem(drawerItemModel: DrawerItemModel(title: "Setting system", image: "assets/images/settings.svg")),
                 InActiveDrawerItem(drawerItemModel: DrawerItemModel(title: "Log out", image: "assets/images/logout.svg")),
                 SizedBox(height: 48)

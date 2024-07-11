@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'custom_elevated_button.dart';
 import 'custom_text_field.dart';
 
 class QuickInvoiceForm extends StatelessWidget {
@@ -26,6 +27,16 @@ class QuickInvoiceForm extends StatelessWidget {
             Expanded(child: CustomTextField(hint: 'Item Count', title: 'USD',)),
           ],
         ),
+        SizedBox(height: 24),
+        Row(
+          children: [
+            Expanded(child: CustomElevatedButton(color: Color(0xff4EB7F2),backgroundColor: Colors.white)),
+
+            SizedBox(width: 24),
+            Expanded(child: CustomElevatedButton()),
+
+          ],
+        )
       ],
     );
   }

@@ -6,18 +6,14 @@ import 'package:responsive_and_adaptive/widgets/all_expenses_item.dart';
 import 'package:responsive_and_adaptive/widgets/range_options.dart';
 
 import 'AllExpensesItemsListView.dart';
+import 'custom_background_container.dart';
 
 class AllExpenses extends StatelessWidget {
   const AllExpenses({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(20),
-      decoration: ShapeDecoration(
-        color: Colors.white,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      ),
+    return CustomBackgroundContainer(
       child: const Column(
         children: [
           AllExpensesHeader(),
@@ -28,4 +24,3 @@ class AllExpenses extends StatelessWidget {
     );
   }
 }
-

@@ -12,9 +12,10 @@ class MyCardsAndTransactionHistory extends StatelessWidget {
       child: const Column(
         children: [
           MyCardsSection(),
-          TransactionHistory()
+          TransactionHistory(),
+
         ],
       ),
-    );
+ );
   }
 }

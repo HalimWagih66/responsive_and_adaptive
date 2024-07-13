@@ -16,23 +16,27 @@ class CustomDrawer extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return const CustomScrollView(
-      slivers: [
-          SliverToBoxAdapter(child: UserInfoListTileItem(userInfoListTileModel: UserInfoListTileModel(title: "Lekan Okeowo", subtitle: "demo@gmail.com", image: "assets/images/avatar_3.svg"))),
-          SliverToBoxAdapter(child: SizedBox(height: 8)),
-          DrawerListItems(),
-          SliverFillRemaining(
-            hasScrollBody: false,
-            child: Column(
-              children: [
-                Expanded(child:  SizedBox(height: 20)),
-                InActiveDrawerItem(drawerItemModel: DrawerItemModel(title: "Setting system", image: "assets/images/settings.svg")),
-                InActiveDrawerItem(drawerItemModel: DrawerItemModel(title: "Log out", image: "assets/images/logout.svg")),
-                SizedBox(height: 48)
-              ],
+    return Container(
+      color: const Color.fromRGBO(255, 255, 255, 1),
+      width: MediaQuery.sizeOf(context).height * 0.7,
+      child: const CustomScrollView(
+        slivers: [
+            SliverToBoxAdapter(child: UserInfoListTileItem(userInfoListTileModel: UserInfoListTileModel(title: "Lekan Okeowo", subtitle: "demo@gmail.com", image: "assets/images/avatar_3.svg"))),
+            SliverToBoxAdapter(child: SizedBox(height: 8)),
+            DrawerListItems(),
+            SliverFillRemaining(
+              hasScrollBody: false,
+              child: Column(
+                children: [
+                  Expanded(child:  SizedBox(height: 20)),
+                  InActiveDrawerItem(drawerItemModel: DrawerItemModel(title: "Setting system", image: "assets/images/settings.svg")),
+                  InActiveDrawerItem(drawerItemModel: DrawerItemModel(title: "Log out", image: "assets/images/logout.svg")),
+                  SizedBox(height: 48)
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+      ),
     );
   }
 }

@@ -21,8 +21,8 @@ class CustomDrawer extends StatelessWidget {
       width: MediaQuery.sizeOf(context).height * 0.7,
       child: const CustomScrollView(
         slivers: [
-            SliverToBoxAdapter(child: UserInfoListTileItem(userInfoListTileModel: UserInfoListTileModel(title: "Lekan Okeowo", subtitle: "demo@gmail.com", image: "assets/images/avatar_3.svg"))),
-            SliverToBoxAdapter(child: SizedBox(height: 8)),
+            SliverToBoxAdapter(child: UserInfoListTileItem(userInfoListTileModel: UserInfoListTileModel(title: "Lekan Okeowo", subtitle: "demo@gmail.com", image: "assets/images/avatar_3.svg"),),),
+            SliverToBoxAdapter(child: SizedBox(height: 8),),
             DrawerListItems(),
             SliverFillRemaining(
               hasScrollBody: false,
